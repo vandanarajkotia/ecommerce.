@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Shop</title>
+</head>
+<body style="text-align:center; font-family:sans-serif;">
+    <h1>🛒 My Store</h1>
+
+    {% for product in products %}
+        <div style="margin:20px;">
+            <h2>{{ product.name }}</h2>
+            <p>Price: ₹{{ product.price }}</p>
+            <a href="/checkout/{{ product.id }}">
+                <button>Buy Now</button>
+            </a>
+        </div>
+    {% endfor %}
+</body>
+</html>
